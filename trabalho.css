@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Helvetica;
+  font-size: 16px;
+  padding: 10px;
+  width: 90%;  
+}
+#page{
+  width:60%;
+  min-width: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+header {
+  border: 1px solid black;
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+div.atendente{
+  font-family: Helvetica;
+  padding: 5px;
+  width: 60%;
+  font-size: 13px;
+}
+div.atendente_texto {
+  font-family: Helvetica;
+  border: 1px solid black;
+  padding: 5px;
+  width: 50%;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+div.voce_linha {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+div.voce {
+  font-family: Helvetica;
+  padding: 5px;
+  font-size: 13px;
+  margin-right: 10px;
+}
+div.voce_texto {
+  font-family: Helvetica;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 13px;
+  width: 50%;
+  text-align: right;
+  margin-bottom: 12px;
+}
+form {
+  display: flex;
+  margin: 10px auto;
+	width: 90%;
+}
+div.input {
+	flex: 1;
+  font-family: Helvetica;
+  padding: 5px;
+  font-size: 15px;
+  display: text;
+}
+form .input input{
+	width: 100%;
+  padding: 5px;
+  font-size: 15px;
+}
+form .row-button button {
+  font-size: 18px;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+form .row-button button:hover {
+  background-color: green; 
+} 
+main {
+	border: 1px solid black;
+	width: 90%;
+	padding: 5px;
+	margin: 0 auto;
+	overflow-y: scroll;
+	height: 300px;
+}

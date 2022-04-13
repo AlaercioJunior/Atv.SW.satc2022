@@ -1,0 +1,67 @@
+<div><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio 1 - Web</title>
+    <link rel="stylesheet" type="text/css" href="trabalho.css" />
+  </head>
+  <body>
+    <div id="page">
+      <header>
+        <h2>Atendimento on-line</h2>
+      </header> 
+      <main>
+		<div id="mensagens">
+          <div class="atendente"> Atendente diz:</div>
+          <div class="atendente_texto">Blabla blabla blabla</div>
+          <div class="atendente"> Atendente diz:</div>
+          <div class="atendente_texto">Blabla blabla blabla</div>
+		</div>
+		<div id="ancora"></div>
+	  </main> 
+      <form action="#" id="formAdd" method="post">
+          <div class="input">
+            <input type="text"  name="mensagem" class="form-control" id="item"/>
+          </div>
+          <div class="row-button">
+            <button type="submit">Enviar</button>
+          </div>
+      </form>
+    </div>
+	<script type="text/javascript">
+
+      function adicionaItem() {
+        const item = document.getElementById("item");
+
+		let novaDiv = document.createElement("div");
+		novaDiv.classList.add("voce");
+        novaDiv.innerHTML = `${"Voce diz:"}`;	
+			
+        let novaLi = document.createElement("div");
+		novaLi.classList.add("voce_texto");
+        novaLi.innerHTML = `${item.value}`;
+		
+		let novaBl = document.createElement("div");
+		novaBl.classList.add("voce_linha");
+		novaBl.appendChild(novaDiv);
+		novaBl.appendChild(novaLi);
+
+        const lista = document.getElementById("mensagens");
+        lista.appendChild(novaBl);
+		
+		item.value = "";
+		
+      }
+
+
+      function submitForm(event) {
+		event.preventDefault();
+        adicionaItem();
+		window.location.href='#ancora';
+		document.getElementById('item').focus();
+      }
+	  
+      document.getElementById("formAdd").addEventListener("submit", submitForm);
+    </script>
+  </body>
+</html>
